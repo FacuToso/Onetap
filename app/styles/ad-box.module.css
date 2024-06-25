@@ -1,0 +1,12 @@
+.container {
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  height: 115px;
+}
+
+.image_container {
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid rgb(47, 51, 54);
+}

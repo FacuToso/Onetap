@@ -1,0 +1,41 @@
+.card {
+  background: linear-gradient(to right,
+      rgb(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.08));
+  ;
+  /* border: 1px solid rgb(47, 51, 54); */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  width: 60%;
+}
+
+.card_body {
+  padding: 0.5rem;
+}
+
+.username_text {
+  font-weight: bold;
+}
+
+.message_container {
+  display: flex;
+  align-items: center;
+}
+
+.sent_date_container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.sent_date_text {
+  color: rgb(113, 118, 123);
+  font-size: 0.8em;
+}
+
+.sent_message_card {
+  align-self: flex-end;
+}
+.received_message_card {
+  align-self: flex-start;
+}

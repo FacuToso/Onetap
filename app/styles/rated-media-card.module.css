@@ -1,0 +1,35 @@
+.card {
+    background-color: inherit;
+    margin: 10px;
+    /* border: 1px solid rgb(47, 51, 54); */
+    background: rgb(255, 255, 255 , 0.1);
+    border-radius: 20px;
+}
+
+.image_container{
+  border-radius: 20px;
+}
+
+.image{
+  border-radius: 20px;
+}
+
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 576px) {
+  .text_container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .rating_container, .image_container {
+    display: flex;
+    justify-content: center;
+  }
+}

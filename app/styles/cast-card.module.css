@@ -1,0 +1,28 @@
+.card {
+  color: whitesmoke;
+  background: linear-gradient(
+    to top,
+    rgb(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.08)
+  );
+  /* background: transparent; */
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  backdrop-filter: blur(3px);
+  min-width: 138px;
+  width: 138px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+.image{
+  border-radius: 20px;
+}
+
+.card_body {
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.character_text {
+  font-size: 0.9em;
+}

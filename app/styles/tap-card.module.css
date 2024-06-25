@@ -1,0 +1,91 @@
+.container {
+  /* border: 1px solid rgb(47, 51, 54); */
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.08)
+  );
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 1rem;
+  width: 25%;
+  cursor: pointer;
+}
+.container:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tap_author_image_container {
+  flex-grow: 0;
+}
+
+.tap_author {
+  font-weight: bold;
+}
+.tap_date {
+  color: rgb(113, 118, 123);
+}
+
+.tap_edited_icon {
+  color: rgb(113, 118, 123);
+}
+
+.respond_button:hover .respond_icon {
+  color: cyan;
+}
+
+.like_button:hover .like_icon {
+  color: yellow;
+}
+
+.interactions_row {
+  justify-content: space-around;
+}
+
+.interactions_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgb(47, 51, 54); */
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.08)
+  );
+  border-radius: 20px;
+}
+
+.interactions_column:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.interactions_text {
+  text-decoration: none;
+  color: white;
+}
+
+.span_responding_to {
+  color: rgb(113, 118, 123);
+}
+.span_responding_to_user {
+  font-weight: bold;
+}
+
+.actions_dropdown_toggle::after {
+  display: none;
+}
+
+.actions_icon {
+  color: white;
+}
+
+.dropdown{
+  color: aliceblue;
+  background-color: #1E1035;
+  border-radius: 15px;
+  border: 2px solid #ffffff !important;
+}
+.dropdownItem{
+  color: aliceblue;
+  border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+.chars_left_container {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.chars_left_span {
+  color: rgb(113, 118, 123);
+}
+.no_chars_left {
+  color: red;
+}
+
+.image_container {
+  cursor: pointer;
+}
+
+.searchInput{
+  background-color: #2f1755 !important;
+  line-height: 2 !important;
+  border-radius: 15px;
+  border: 2px solid rgb(233, 236, 239 , 0.7)!important;
+  color: white !important;
+}
+.searchBtn{
+  background-color: #402f5a !important;
+  border-radius: 15px;
+  border: 2px solid rgb(233, 236, 239 , 0.7) !important;
+}

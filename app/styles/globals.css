@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  background-color: #1C0522;
+}
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div,
+div#__next > div > div {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.onetap-control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.onetap-control input {
+  font: inherit;
+  border-radius: 4px;
+  width: 100%;
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.onetap-control .react-select {
+  font: inherit;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #fd0057, #9c044f);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 13px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 13px 1px;
+}
+
+.nav-tabs .nav-link.active{
+  color: #ff0080; 
+  background:rgba(255, 255, 255, 0.1);
+  border-color: none;
+  border: none;
+}
+
+.nav-tabs button.nav-link {
+  border-bottom: none;
+  color: #9c044f;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nav-tabs .nav-link:hover{
+  border-color: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-content{
+  background: linear-gradient(#140133, #00040c);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
+.modal{
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+/* Notification Styles override */
+.notification-container {
+  pointer-events: none;
+}
+.notification-container > div {
+  padding-top: 15px !important;
+}
+.notification {
+  border-radius: 20px !important;
+}
+
+.notification-success {
+  background: linear-gradient(0deg, rgba(6,120,0,1) 0%, rgba(55,196,2,1) 100%) !important;
+}
+.notification-error {
+  background: linear-gradient(0deg, rgba(180,0,0,1) 0%, rgba(231,0,0,1) 100%);
+}
+
+/* Social */
+:root {
+  --social-max-height: 1575px;
+}
+
+@media (max-height: 1080px) {
+  :root {
+    --social-max-height: 600px;
+  }
+}
+
+@media (max-height: 950px) {
+  :root {
+    --social-max-height: 500px;
+  }
+}
+
+@media (max-height: 812px) {
+  :root {
+    --social-max-height: 400px;
+  }
+}
+
+@media (max-height: 700px) {
+  :root {
+    --social-max-height: 275px;
+  }
+}

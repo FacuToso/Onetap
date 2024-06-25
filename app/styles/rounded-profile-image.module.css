@@ -1,0 +1,10 @@
+.tap_author_image {
+  border-radius: 50%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  opacity: 0.8;
+}

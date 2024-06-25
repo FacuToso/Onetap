@@ -1,0 +1,35 @@
+.form {
+    width: 50%;
+    max-width: 50%;
+}
+
+.input_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-height: 100vh;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .search_box {
+    width: 200px !important;
+  }
+}
+
+@media (max-width: 350px) {
+.search_box {
+  width: 150px !important;
+}
+}

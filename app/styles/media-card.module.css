@@ -1,0 +1,60 @@
+.card {
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: inherit;
+  /* border: 1px solid rgb(47, 51, 54); */
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.08)
+  );
+  border-radius: 20px;
+}
+
+.image{
+  border-radius: 10px;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.release_date_text {
+  color: rgb(113, 118, 123);
+}
+
+.vote_average_column {
+  flex-grow: 0;
+  display: flex;
+}
+
+.vote_average_container {
+  width: 130px;
+  height: 130px;
+}
+
+@media (max-width: 576px) {
+  .info_container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .vote_average_row {
+    justify-content: center;
+  }
+
+  .vote_average_container {
+    display: flex;
+    align-items: center;
+  }
+}

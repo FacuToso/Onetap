@@ -1,0 +1,17 @@
+.searchInput{
+  background-color: #2f1755 !important;
+  line-height: 2 !important;
+  border-radius: 15px;
+  border: 2px solid rgb(233, 236, 239 , 0.7)!important;
+  color: white !important;
+}
+.searchBtn{
+  background-color: #402f5a !important;
+  border-radius: 15px;
+  border: 2px solid rgb(233, 236, 239 , 0.7) !important;
+}
+
+.searchInput::-webkit-search-decoration:hover,
+.searchInput::-webkit-search-cancel-button:hover { 
+  cursor: pointer; 
+}

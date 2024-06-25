@@ -1,0 +1,66 @@
+.card {
+    background: linear-gradient(to right,
+            rgb(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.08));
+    ;
+    /* border: 1px solid rgb(47, 51, 54); */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.comment_container {
+    background: linear-gradient(to right,
+            rgb(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.08));
+    ;
+    /* border: 1px solid rgb(47, 51, 54); */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.username_text {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.create_date_text {
+    color: rgb(113, 118, 123);
+    margin-left: 10px;
+}
+
+.comment_text {
+    font-size: medium;
+    margin-left: 10px;
+}
+
+.delete_comment_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    color: rgb(224, 11, 11)
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px ) {
+  .image_container {
+    margin-bottom: 1rem;
+  }
+
+  .comment_container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

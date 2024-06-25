@@ -1,0 +1,40 @@
+.modal {
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.08)
+  );
+  overflow-y: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content{
+  border-radius: 0px !important;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(5, 4, 21, 0.5);
+}
+
+.player_wrapper {
+  padding: 5px;
+}
+
+.close_button {
+  position: absolute;
+  color: white;
+  background-color: white;
+  right: 10px;
+  font-size: 2em;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

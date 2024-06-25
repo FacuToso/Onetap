@@ -1,0 +1,33 @@
+.container {
+  padding: 1rem;
+}
+
+.taps_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.response_container {
+  display: flex;
+  flex-direction: row;
+}
+.response_taps_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tap_card {
+  width: 75%;
+}
+.tap_main_card {
+  width: 100%;
+  cursor: auto;
+}
+.tap_main_card:hover {
+  background-color: inherit;
+}

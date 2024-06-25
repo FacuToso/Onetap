@@ -1,0 +1,23 @@
+.container {
+    margin-top: 0.5rem;
+}
+
+.comments_container {
+    margin-top: 0.5rem;
+    overflow-y: auto;
+    max-height: 400px;
+    padding-bottom: 15px;
+}
+
+.searchInput{
+    background-color: #2f1755 !important;
+    line-height: 2 !important;
+    border-radius: 15px;
+    border: 2px solid rgb(233, 236, 239 , 0.7)!important;
+    color: white !important;
+}
+.searchBtn{
+    background-color: #402f5a !important;
+    border-radius: 15px;
+    border: 2px solid rgb(233, 236, 239 , 0.7) !important;
+}

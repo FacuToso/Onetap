@@ -1,0 +1,10 @@
+.tabs {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.tabs::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

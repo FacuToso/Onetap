@@ -1,0 +1,39 @@
+.card {
+    color: white;
+    background-color: inherit;
+    /* border: 1px solid rgb(47, 51, 54); */
+    border-bottom: 1px;
+    background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.08)
+  );
+    min-width: 200px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .pointer{
+    cursor: pointer;
+  }
+  
+  .card_body {
+    padding: 10px;
+  }
+  .card_body div {
+    justify-content: center;
+  }
+
+  .character_text {
+    font-size: 0.9em;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+  .clickable:hover {
+    opacity: 0.9;
+  }

@@ -1,0 +1,114 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  UserId                    Int                        @id(map: "User_PK") @default(autoincrement())
+  Login                     String                     @unique(map: "User_Login_UK")
+  Password                  String
+  TMDBGuestSessionId        String
+  ProfileDescription        String?
+  ProfileImageAWSKey        String?
+  ProfileColorCode1         String                     @default("#252525")
+  ProfileColorCode2         String                     @default("#555555")
+  ProfileHeaderImageUrl     String?
+  SocialProfileHeaderImage  SocialProfileHeaderImage?  @relation(fields: [ProfileHeaderImageUrl], references: [ImageUrl], onDelete: NoAction, onUpdate: NoAction, map: "User_SocialProfileHeaderImage_FK")
+  ReceivedChatMessages      ChatMessage[]              @relation("ChatMessage_RecipientIdToUser")
+  SentChatMessages          ChatMessage[]              @relation("ChatMessage_SenderIdToUser")
+  Taps                      Tap[]
+  UserComment               UserComment[]
+  Followers                 UserFollow[]               @relation("UserToUserFollow_FollowingUserId")
+  UsersFollowing            UserFollow[]               @relation("UserToUserFollow_UserId")
+  UserMediaRelations        UserMedia[]
+  UserSocialProfileSections UserSocialProfileSection[]
+  UserTapLikes              UserTapLike[]
+}
+
+model Tap {
+  TapId             Int           @id(map: "Tap_PK") @default(autoincrement())
+  Content           String
+  UserId            Int
+  CreateDate        DateTime      @default(now()) @db.Timestamp(6)
+  RespondingToTapId Int?
+  EditDate          DateTime?     @db.Timestamp(6)
+  TapRespondingTo   Tap?          @relation("TapToTap", fields: [RespondingToTapId], references: [TapId], onDelete: Cascade, map: "RespondingTap_Tap_FK")
+  User              User          @relation(fields: [UserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "Tap_User_FK")
+  TapResponses      Tap[]         @relation("TapToTap")
+  UserTapLikes      UserTapLike[]
+}
+
+model UserFollow {
+  UserId          Int
+  FollowingUserId Int
+  FollowingUser   User @relation("UserToUserFollow_FollowingUserId", fields: [FollowingUserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "UserFollow_FollowingUser_FK")
+  User            User @relation("UserToUserFollow_UserId", fields: [UserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "UserFollow_User_FK")
+
+  @@id([UserId, FollowingUserId], map: "UserFollow_PK")
+}
+
+model UserTapLike {
+  UserId Int
+  TapId  Int
+  Tap    Tap  @relation(fields: [TapId], references: [TapId], onDelete: NoAction, onUpdate: NoAction, map: "UserTapLike_Tap_FK")
+  User   User @relation(fields: [UserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "UserTapLike_User_FK")
+
+  @@id([UserId, TapId], map: "UserTapLike_PK")
+}
+
+model UserMedia {
+  UserId         Int
+  MediaType      String
+  MediaId        Int
+  IsFavorite     Boolean
+  IsInWatchLater Boolean
+  User           User    @relation(fields: [UserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "UserMedia_User_FK")
+
+  @@id([UserId, MediaType, MediaId], map: "UserMedia_PK")
+}
+
+model SocialProfileSection {
+  Key                      String                     @id(map: "SocialProfileSection_PK")
+  Title                    String
+  Order                    Int                        @unique(map: "SocialProfileSection_Order_UN")
+  UserSocialProfileSection UserSocialProfileSection[]
+}
+
+model UserSocialProfileSection {
+  UserId                  Int
+  SocialProfileSectionKey String
+  SocialProfileSection    SocialProfileSection @relation(fields: [SocialProfileSectionKey], references: [Key], onDelete: NoAction, onUpdate: NoAction, map: "UserSocialProfileSection_SocialProfileSection_FK")
+  User                    User                 @relation(fields: [UserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "UserSocialProfileSection_User_FK")
+
+  @@id([UserId, SocialProfileSectionKey], map: "UserSocialProfileSection_PK")
+}
+
+model ChatMessage {
+  ChatMessageId Int      @id(map: "ChatMessage_PK") @default(autoincrement())
+  SenderId      Int
+  RecipientId   Int
+  Message       String
+  SentDate      DateTime @default(now()) @db.Timestamp(6)
+  Recipient     User     @relation("ChatMessage_RecipientIdToUser", fields: [RecipientId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "ChatMessage_Recipient_FK")
+  Sender        User     @relation("ChatMessage_SenderIdToUser", fields: [SenderId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "ChatMessage_Sender_FK")
+}
+
+model UserComment {
+  UserCommentId Int      @id(map: "UserComment_PK") @default(autoincrement())
+  UserId        Int
+  MediaType     String
+  MediaId       Int
+  Comment       String
+  CreateDate    DateTime @default(dbgenerated("CURRENT_DATE")) @db.Timestamp(0)
+  User          User     @relation(fields: [UserId], references: [UserId], onDelete: NoAction, onUpdate: NoAction, map: "UserComment_User_FK")
+}
+
+model SocialProfileHeaderImage {
+  ImageUrl  String @id(map: "ProfileBackgroundImage_PK")
+  ImageName String
+  User      User[]
+}

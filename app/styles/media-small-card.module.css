@@ -1,0 +1,34 @@
+.card {
+  margin: 5px;
+  margin-bottom: 15px;
+  padding: 5px;
+  color: black;
+  cursor: pointer;
+  min-width: 190px;
+  width: 190px;
+  border-radius: 20px;
+}
+.card:hover {
+  opacity: 0.9;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    min-width: 150px;
+    width: 150px;
+    height: 197px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    min-width: 110px;
+    width: 110px;
+    height: 144.7px;
+  }
+}

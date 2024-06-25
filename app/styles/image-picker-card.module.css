@@ -1,0 +1,23 @@
+.card {
+  width: 250px;
+  min-width: 250px;
+  margin-right: 0.5rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  opacity: 0.9;
+}
+
+.selected_card_container {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.selected_icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 2em;
+}

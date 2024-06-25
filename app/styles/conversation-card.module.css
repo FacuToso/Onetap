@@ -1,0 +1,49 @@
+.card {
+  background: linear-gradient(to right,
+      rgb(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.08));
+  ;
+  /* border: 1px solid rgb(47, 51, 54); */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover, .card.selected {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.username_text {
+  font-weight: bold;
+}
+
+.sent_date_text {
+  color: rgb(113, 118, 123);
+}
+
+.reply_icon {
+  color: rgb(113, 118, 123);
+  margin-right: 1rem;
+}
+
+.username_message_container {
+  overflow: hidden;
+}
+
+.username_container {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.message_container {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

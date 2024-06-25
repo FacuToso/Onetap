@@ -1,0 +1,90 @@
+.container {
+    padding: 1rem 2rem 0 2rem;
+   /* center to page */
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.data_container {
+    border: 0px solid rgb(47, 51, 54);
+    border-radius: 25px;
+    position: relative;
+    /* background: linear-gradient(to right, #000000, #200000); */
+}
+
+.header_container{
+    margin-top: 190px;
+    border: 0px solid rgb(47, 51, 54);
+    border-radius: 25px;
+    position: relative;
+}
+
+.tap_card {
+    width: 100% !important;
+}
+
+.username_text {
+    font-weight: bold;
+    text-align: center;
+    font-size: larger;
+}
+
+.media_card {
+    margin: 10px;
+}
+
+.header_image {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 25px 25px 0 0;
+    border: 2px solid rgb(0, 0, 0 , 0.3);
+    pointer-events: none;
+}
+
+.profile_image{
+    position: relative;
+    top: 75%;
+    border-radius: 50%;
+    border: 4px solid rgb(0, 0, 0 , 0.8);
+    pointer-events: none;
+}
+
+.header_button {
+  margin: 10px;
+  position: relative;
+  align-self: center;
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.2);
+  border: 0px;
+  z-index: 150;
+}
+.header_button:hover {
+  align-self: center;
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.5);
+  border: 0px;
+}
+.header_button:active, .header_button:focus {
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.edit_btn_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 350px) {
+  .edit_btn_container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 298px) {
+  .relations_column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
